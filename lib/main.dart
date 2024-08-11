@@ -13,12 +13,12 @@ import 'package:real_estate_moniepoint_test/core/utils/constants.dart';
 void main() async {
   await dotenv.load(fileName: Environment.envFile);
   try {
-    final carPoolApp = await RealEstateApp.initializeApp(
+    final realEsatate = await RealEstateApp.initializeApp(
       baseUrl: Environment.baseUrl,
       webSocketUrl: Environment.webSocketUrl,
     );
 
-    runApp(carPoolApp);
+    runApp(realEsatate);
   } catch (e) {
     Logger().i(e);
   }
